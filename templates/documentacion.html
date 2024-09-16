@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body class="bg-black-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space x-4">
+                    <!-- Logo -->
+                    <div>
+                        <a href="/" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2l9 4.9-9 4.9-9-4.9L12 2z" />
+                                <path d="M12 22l9-4.9V9.8L12 14.7 3 9.8v7.3l9 4.9z" />
+                            </svg>
+                            <span class="font-bold">SmartWatch</span>
+                        </a>
+                    </div>
+                    <!-- Primary Nav Links -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="/" class="py-5 px-3 text-gray-700 hover:text-gray-900">Archivo</a>
+                        <a href="/reportes" class="py-5 px-3 text-gray-700 hover:text-gray-900">Reportes</a>
+                        <div class="relative group">
+                            <button class="text-gray-800 hover:text-blue-600 transition duration-300">Ayuda</button>
+                            <!-- Dropdown Menu -->
+                            <div class="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg">
+                                <a href="/acerca-de" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Acerca de...</a>
+                                <a href="/informacion" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Información</a>
+                                <a href="/documentacion" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Documentación</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Secondary Nav Links -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="/login" class="py-2 px-3 bg-blue-600 text-white rounded hover:bg-blue-500">Login</a>
+                    <a href="/signup" class="py-2 px-3 bg-blue-600 text-white rounded hover:bg-blue-500">Signup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Your content here -->
+    <div class="container mx-auto py-10">
+        <div class="bg-white">
+            <div class="py-7">
+              <h2 class="sr-only">Products</h2>
+          
+              <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+                <a href="#" class="group">
+                  <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                    <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+                  </div>
+                  <h3 class="mt-4 text-sm text-gray-700">Earthen Bottle</h3>
+                  <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
+                </a>
+                <a href="#" class="group">
+                  <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                    <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+                  </div>
+                  <h3 class="mt-4 text-sm text-gray-700">Nomad Tumbler</h3>
+                  <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+</body>
+
+</html>

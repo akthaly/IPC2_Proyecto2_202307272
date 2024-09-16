@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+
+</head>
+
+<body class="bg-black-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-4">
+                    <!-- Logo -->
+                    <div>
+                        <a href="/" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-blue-600"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2l9 4.9-9 4.9-9-4.9L12 2z" />
+                                <path d="M12 22l9-4.9V9.8L12 14.7 3 9.8v7.3l9 4.9z" />
+                            </svg>
+                            <span class="font-bold">SmartWatch</span>
+                        </a>
+                    </div>
+
+                    <!-- Primary Nav Links -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="/" class="py-5 px-3 text-gray-700 hover:text-gray-900">Archivo</a>
+                        <a href="/reportes" class="py-5 px-3 text-gray-700 hover:text-gray-900">Reportes</a>
+                        <div class="relative group">
+                            <button class="text-gray-800 hover:text-blue-600 transition duration-300">Ayuda</button>
+                            <!-- Dropdown Menu -->
+                            <div class="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg">
+                                <a href="/acerca-de"
+                                    class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Acerca de...</a>
+                                <a href="/informacion"
+                                    class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Información</a>
+                                <a href="/documentacion"
+                                    class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Documentación</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Nav Links -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="/login" class="py-2 px-3 bg-blue-600 text-white rounded hover:bg-blue-500">Login</a>
+                    <a href="/signup" class="py-2 px-3 bg-blue-600 text-white rounded hover:bg-blue-500">Signup</a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </nav>
+
+    <!-- Your content here -->
+    <div class="container mx-auto py-10">
+        <h1 class="text-center text-3xl font-bold"> Digital Intelligence, S. A.</h1>
+    </div>
+
+
+</body>
+
+</html>

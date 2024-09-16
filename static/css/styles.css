@@ -1,0 +1,22 @@
+/* Definición de colores personalizados */
+.neon-pink {
+    color: #FF007F;
+}
+.neon-blue {
+    color: #00FFFF;
+}
+.neon-green {
+    color: #39FF14;
+}
+.neon-purple {
+    color: #6A0DAD;
+}
+.bg-neon-pink {
+    background-color: #FF007F;
+}
+.bg-neon-blue {
+    background-color: #00FFFF;
+}
+.bg-neon-green {
+    background-color: #39FF14;
+}
