@@ -1,8 +1,6 @@
 # Entorno virtual de Python
 venv/
 env/
-# MacOS
-.DS_Store
 
 # Archivos de Python compilados
 __pycache__/
