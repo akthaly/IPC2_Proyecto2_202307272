@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ListaMaquinas>
+<Maquina>
+<NombreMaquina>EjemploMaquina323</NombreMaquina>
+<CantidadLineasProduccion>23</CantidadLineasProduccion>
+<CantidadComponentes>443</CantidadComponentes>
+<TiempoEnsamblaje>14</TiempoEnsamblaje>
+<ListadoProductos>
+<Producto>
+<nombre>sesesese</nombre>
+<elaboracion>
+aeiou
+</elaboracion>
+</Producto>
+</ListadoProductos>
+</Maquina>
+<Maquina>
+<NombreMaquina>EjemploMaquina2324234</NombreMaquina>
+<CantidadLineasProduccion>22132</CantidadLineasProduccion>
+<CantidadComponentes>422134</CantidadComponentes>
+<TiempoEnsamblaje>112134</TiempoEnsamblaje>
+<ListadoProductos>
+<Producto>
+<nombre>Caballo</nombre>
+<elaboracion>
+HOLAAAAA   
+</elaboracion>
+</Producto>
+<Producto>
+<nombre> [adfafsdf] </nombre>
+<elaboracion>
+unodostres
+</elaboracion>
+</Producto>
+</ListadoProductos>
+</Maquina>
+</ListaMaquinas>

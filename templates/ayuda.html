@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+  <link href="{{ url_for('static', filename='css/Styles.css') }}" rel="stylesheet">
+  <title>Ayuda</title>
+</head>
+
+<body>
+  <!-- Extensión de la Navbar -->
+  {% extends 'NavBar.html' %}
+
+  {% block contenido %}
+  
+  <div class="body">
+    <section class="justificado py-10">
+      <h1 class="fredokaSemiBold fontColorBlack sm:text-4xl">Información:</h1>
+      <a class="fredoka fontColorBlack sm:text-2xl"> Este programa fue desarrollado para visualizar y simular el 
+        funcionamiento de un sistema de ensamblaje de distintos productos haciendo uso de un brazo robótico.
+      </a>
+    </section>
+    <section class="mx-auto max-w-2xl py-10 sm:py-10 lg:py-10 grid grid-cols-2 gap-4 cards-container">
+      <div class="cardInfo text-center">
+        <h1 class="fredokaBold fontColorBeige sm:text-4xl">Información Personal</h1>
+        <!-- <p class="fredoka text-white py-5">Desarrollado por: Bryan Alejandro Anona Paredes.</p>
+        <p class="fredoka text-white">Carnet: 202307272</p> -->
+        <div class="flex items-center justify-center gap-x-6">
+          <a href="#" class="text-white fredokaSemiBold botones">Información</a>
+        </div>
+      </div>
+      <div class="cardInfo text-center">
+        <h1 class="fredokaBold fontColorBeige sm:text-4xl">Información en Documentación</h1>
+        <!-- <p class="fredoka text-white py-5">Esta aplicación fue desarrollada utilizando tanto Flask, HTML, Python y Tailwind.</p> -->
+        <div class="flex items-center justify-center gap-x-6">
+          <a href="#" class="text-white fredokaSemiBold botones">Documentación</a>
+        </div>
+      </div>
+    </section>
+    <section class="py-15"> 
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Contacto:</h1>
+      <div class="grid grid-cols-3 gap-4 py-10">
+        <a href="www.facebook.com/2002.xzh/" class="hover:underline block text-lg font-bold leading-8 text-stone-50 text-center">Facebook</a>
+        <a href="www.instagram.com/eustass.xzh" class="hover:underline block text-lg font-bold leading-8 text-stone-50 text-center">Instagram</a>
+        <a href="https://www.linkedin.com/in/alejandro-anona-xzh/" class="hover:underline block text-lg font-bold text-stone-50 text-center">Linkedin</a>
+      </div>
+    </section>
+
+  </div>
+  
+  {% endblock %}
+
+</body>
+
+</html>
