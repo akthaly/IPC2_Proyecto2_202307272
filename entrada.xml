@@ -1,43 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ListaMaquinas>
-    <Maquina>
-        <NombreMaquina>M01PC2</NombreMaquina>
-        <CantidadLineasProduccion>5</CantidadLineasProduccion>
-        <CantidadComponentes>5</CantidadComponentes>
-        <TiempoEnsamblaje>3</TiempoEnsamblaje>
-        <ListadoProductos>
-            <Producto>
-                <nombre>Audífonos Bluetooth</nombre>
-                <elaboracion>
-                L1C3 L2C2 L1C1
-                </elaboracion>
-            </Producto>
-            <Producto>
-                <nombre>Audífonos De Cable</nombre>
-                <elaboracion>
-                L2C3 L1C2 L3C1
-                </elaboracion>
-            </Producto>
-        </ListadoProductos>
-    </Maquina>
-    <Maquina>
-        <NombreMaquina>MAQUINA2324</NombreMaquina>
-        <CantidadLineasProduccion>3</CantidadLineasProduccion>
-        <CantidadComponentes>8</CantidadComponentes>
-        <TiempoEnsamblaje>2</TiempoEnsamblaje>
-        <ListadoProductos>
-            <Producto>
-                <nombre>Telefono Bluetooth</nombre>
-                <elaboracion>
-                L2C3  L3C2 L1C2 L1C4 L2C7 L3C8
-                </elaboracion>
-            </Producto>
-            <Producto>
-                <nombre>telefono De Cable</nombre>
-                <elaboracion>
-                L2C3         L1C2
-                </elaboracion>
-            </Producto>
-        </ListadoProductos>
-    </Maquina>
-</ListaMaquinas>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Styles.css') }}">
+    <title>Reportes</title>
+</head>
+<body>
+    {% extends 'NavBar.html' %}
+    
+    {% block contenido %}
+        <form method="POST" action="{{ url_for('mostrar_instrucciones') }}">
+            <label for="maquina">Seleccionar Máquina:</label>
+            <select name="maquina" id="maquina" required>
+                {% for maquina in maquinas %}
+                    <option value="{{ maquina.nombre }}">{{ maquina.nombre }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="producto">Seleccionar Producto:</label>
+            <select name="producto" id="producto" required>
+                <!-- Este será llenado por JavaScript después de seleccionar la máquina -->
+            </select>
+
+            <button type="submit">Mostrar Instrucciones</button>
+        </form>
+
+        <div id="instrucciones">
+            {% if instrucciones %}
+                <h2>Instrucciones de Ensamblaje:</h2>
+                <pre>{{ instrucciones }}</pre>
+            {% endif %}
+        </div>
+    {% endblock %}
+</body>
+</html>

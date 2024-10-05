@@ -49,6 +49,19 @@ def analizarDatosXML():
 
     else:
         return redirect(url_for('ayuda'))
+    
+@app.route('/mostrar_instrucciones', methods=['POST'])
+def mostrar_instrucciones():
+    maquina_nombre = request.form['maquina']
+    producto_nombre = request.form['producto']
+    
+    maquina = maquinas.buscar(maquina_nombre)
+    producto = maquina.productos.buscar(producto_nombre) if maquina else None
+
+    instrucciones = producto.elaboracion if producto else None
+    
+    return render_template('reportes.html', maquinas=maquinas, instrucciones=instrucciones)
+
 
 
 @app.route('/reporte', methods=['POST'])
