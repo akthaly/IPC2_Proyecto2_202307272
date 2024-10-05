@@ -17,6 +17,10 @@ class Producto:
 
     def tiene_instrucciones_pendientes(self):
         return not self.cola_instrucciones.esta_vacia()
+    
+    def mostrar_instrucciones(self):
+        print(f"Instrucciones para {self.nombre}:")
+        self.cola_instrucciones.mostrar()
 
     def __str__(self):
         return f"Nombre producto: {self.nombre}, Elaboración: {self.elaboracion}"

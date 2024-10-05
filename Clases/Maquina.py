@@ -9,10 +9,9 @@ class Maquina:
         
 
     def mostrar(self):
-        print(f"Nombre Máquina: {self.nombre}, N: {self.n}, M: {self.m} Tiempo de Ensamblaje: {self.tiempoEnsamblaje}")
-        print("Productos:")
+        print(f"Nombre Máquina: {self.nombre}, N: {self.n}, M: {self.m}, Tiempo de Ensamblaje: {self.tiempoEnsamblaje}")
         actual = self.productos.cabeza
         while actual:
-            print(actual.dato)  # Usar el método __str__ de ClaseB
+            print(actual.dato)  # Producto.__str__()
+            actual.dato.mostrar_instrucciones()  # Mostrar las instrucciones
             actual = actual.siguiente
-
